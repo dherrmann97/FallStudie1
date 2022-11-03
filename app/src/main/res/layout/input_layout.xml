@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardElevation="10dp"
+    android:layout_marginTop="10dp"
+    android:backgroundTint="#D4ECCD"
+    android:elevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wählen Sie eine Kategorie aus"
+        android:gravity="center"
+        android:textColor="@color/greymedium"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:id="@+id/item"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/itemsSpinner"
+            android:entries="@array/items"
+            android:layout_gravity="center"
+            android:background="#E9EAEF">
+
+        </Spinner>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Summe einfügen..."
+            android:inputType="number"
+            android:id="@+id/amount"
+            android:textColor="@color/greymedium"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:hint="Anmerkung einfügen..."
+            android:id="@+id/note"
+            android:textColor="@color/greymedium"
+            android:textStyle="bold" />
+"
+
+    </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="10dp"
+          android:orientation="horizontal">
+
+          <RelativeLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1">
+              <Button
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/cancel"
+                  android:text="Entfernen"
+                  android:textAllCaps="false"
+                  android:textColor="@color/greymedium"
+                  android:backgroundTint="@color/white"
+                  android:textStyle="bold"
+                  android:layout_margin="2dp"/>
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1">
+              <Button
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/save"
+                  android:textAllCaps="false"
+                  android:text="Speichern"
+                  android:textColor="@color/greymedium"
+                  android:backgroundTint="@color/white"
+                  android:textStyle="bold"
+                  android:layout_margin="2dp"/>
+          </RelativeLayout>
+      </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

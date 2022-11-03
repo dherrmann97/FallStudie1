@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FallStudie</string>
+    <string-array name="items">
+        <item>Kategorien</item>
+        <item>Miete</item>
+        <item>Reisekosten</item>
+        <item>Essen/Trinken</item>
+        <item>Büromaterial</item>
+        <item>Weiterbildung</item>
+        <item>Technikausstatung</item>
+        <item>Fahrtkosten</item>
+        <item>Sonstig</item>
+
+        <item></item>
+    </string-array>
+</resources>

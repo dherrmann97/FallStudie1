@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".EinlogenActivity"
+    android:orientation="vertical"
+    android:layout_margin="1dp"
+    android:background="@drawable/bckgblue">
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:hint="E-Mail einfügen"
+        android:layout_margin="4dp"
+        android:textSize="18sp"
+        android:id="@+id/emailEinfügen"
+        android:textColor="@color/greymedium"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:inputType="textEmailAddress"/>
+
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:hint="Passwort einfügen"
+        android:textColor="@color/greymedium"
+        android:textSize="18sp"
+        android:id="@+id/passwortEinfügen"
+        android:layout_margin="4dp"
+        android:textStyle="bold"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:layout_width="260dp"
+        android:layout_height="35dp"
+        android:id="@+id/einlogenknopf"
+        android:padding="0dp"
+        android:backgroundTint="#B9D8EF"
+        android:layout_marginTop="399dp"
+        android:text="Einlogen"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:text="Kein Account? Registrieren"
+        android:id="@+id/keinAccount"
+        android:textColor="@color/greymedium"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+
+
+
+
+
+
+</LinearLayout>

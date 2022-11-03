@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Diese Ausgabe Bearbeiten"
+        android:gravity="center"
+        android:textColor="@color/greymedium"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemName"
+        android:text="Kategorienname"
+        android:textColor="@color/greymedium"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="15sp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Summe eingeben"
+        android:textColor="@color/greymedium"
+        android:textColorHint="@color/greymedium"
+        android:inputType="number"
+        android:id="@+id/amount"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Anmerkung eingeben"
+        android:textColor="@color/greymedium"
+        android:textColorHint="@color/greymedium"
+        android:inputType="textCapSentences"
+        android:id="@+id/note"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnDelete"
+                android:text="Löschen"
+                android:textAllCaps="false"
+                android:textColor="@color/greymedium"
+                android:backgroundTint="@color/white"
+                android:textStyle="bold"
+                android:layout_margin="2dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnUpdate"
+                android:textAllCaps="false"
+                android:text="Aktualisieren"
+                android:textColor="@color/greymedium"
+                android:backgroundTint="@color/white"
+                android:textStyle="bold"
+                android:layout_margin="2dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

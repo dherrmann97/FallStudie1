@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "29198789062",
+    "firebase_url": "https://fallstudie-f30c5-default-rtdb.firebaseio.com",
+    "project_id": "fallstudie-f30c5",
+    "storage_bucket": "fallstudie-f30c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29198789062:android:c3b203c4e265360d65eac7",
+        "android_client_info": {
+          "package_name": "com.example.fallstudie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29198789062-bje9f9e8pkf3sbtki3pcg6b6sueqboou.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fallstudie",
+            "certificate_hash": "538765485649a0d2f47c738be2e76252c3c4c002"
+          }
+        },
+        {
+          "client_id": "29198789062-1eve4ctpkdk6l798blmblsdiombqp76f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd-XAZshQrTJK8mhSS5OFutu8SlSJopWI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29198789062-1eve4ctpkdk6l798blmblsdiombqp76f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
