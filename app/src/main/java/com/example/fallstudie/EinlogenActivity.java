@@ -19,12 +19,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class EinlogenActivity extends AppCompatActivity {
+    //Variablen definieren inkl. Firebase variablen
 
     private EditText email;
     private EditText passwort;
-    private Button einlogenBtn;
+    private Button einlogenKnpf;
     private TextView einlogenfr;
-    private FirebaseAuth mauth;
+    private FirebaseAuth auth;
     private ProgressDialog progressDialog;
 
 
@@ -35,13 +36,15 @@ public class EinlogenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_einlogen);
 
 
+        //Variablen initialisieren
         email = findViewById(R.id.emailEinfügen);
         passwort = findViewById(R.id.passwortEinfügen);
-        einlogenBtn = findViewById(R.id.einlogenknopf);
+        einlogenKnpf = findViewById(R.id.einlogenknopf);
         einlogenfr = findViewById(R.id.keinAccount);
-        mauth = FirebaseAuth.getInstance();
+        auth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
 
+        //Auf die nächste Aktivität springen, hier von "haben sie kein Account?" zu Activity Registrieren springen
         einlogenfr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,24 +52,24 @@ public class EinlogenActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        einlogenBtn.setOnClickListener(new View.OnClickListener() {
+        // hier die Eingaben vom User überprüefen und Authentification von Firebase verwenden. Nach Authentifizierung auf MainActivity springen
+        einlogenKnpf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String emailString = email.getText().toString();
-                String passwortString = passwort.getText().toString();
+                String email1 = email.getText().toString();
+                String passwort1 = passwort.getText().toString();
 
-                if(TextUtils.isEmpty(emailString)){
+                if(TextUtils.isEmpty(email1)){
                     email.setError("Feld darf nicht leer sein");
                 }
-                if(TextUtils.isEmpty(passwortString)){
+                if(TextUtils.isEmpty(passwort1)){
                     passwort.setError("Feld darf nicht leer sein");
                 } else {
                     progressDialog.setMessage("Einlogen");
                     progressDialog.setCanceledOnTouchOutside(false);
                     progressDialog.show();
 
-                    mauth.signInWithEmailAndPassword(emailString, passwortString).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    auth.signInWithEmailAndPassword(email1, passwort1).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){

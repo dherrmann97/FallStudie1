@@ -188,6 +188,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
+                        android:id="@+id/meinBudget"
                         android:src="@drawable/budget1"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -222,6 +223,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
+                        android:id="@+id/ausgabenHeute"
                         android:src="@drawable/heute"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -255,6 +257,7 @@
 
                     <ImageView
                         android:layout_width="60dp"
+                        android:id="@+id/wocheasgb"
                         android:layout_height="60dp"
                         android:src="@drawable/woche"/>
                     <TextView
@@ -290,6 +293,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
+                        android:id="@+id/monatAusgabe"
                         android:src="@drawable/monat"/>
                     <TextView
                         android:layout_width="wrap_content"

@@ -19,12 +19,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class RegistrierenActivity extends AppCompatActivity {
+    //Variablen definieren
 
-    private EditText emailET;
-    private EditText passwortET;
+    private EditText emailAD;
+    private EditText passwort;
     private Button registrierenBtn;
     private TextView registrierenfr;
-    private FirebaseAuth mauth;
+    private FirebaseAuth auth;
     private ProgressDialog progressDialog;
 
     @Override
@@ -32,15 +33,15 @@ public class RegistrierenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrieren);
 
-
+        //variablen initialisieren
         registrierenBtn = findViewById(R.id.registrierenknopf);
         registrierenfr = findViewById(R.id.keinAccount);
-        emailET = findViewById(R.id.emaileingeben);
-        passwortET = findViewById(R.id.passworteingeben);
-        mauth = FirebaseAuth.getInstance();
+        emailAD = findViewById(R.id.emaileingeben);
+        passwort = findViewById(R.id.passworteingeben);
+        auth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
 
-
+        //Springen von Registrieren zurück zur Einloggen
         registrierenfr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,24 +49,24 @@ public class RegistrierenActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        //Eingaben überprüfen, authentifizierung via Firebase und dann springen auf Mainactivity
         registrierenBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String emailString = emailET.getText().toString();
-                String passwortString = passwortET.getText().toString();
+                String email2 = emailAD.getText().toString();
+                String passwort2 = passwort.getText().toString();
 
-                if (TextUtils.isEmpty(emailString)) {
-                    emailET.setError("Feld darf nicht leer sein");
+                if (TextUtils.isEmpty(email2)) {
+                    emailAD.setError("Feld darf nicht leer sein");
                 }
-                if (TextUtils.isEmpty(passwortString)) {
-                    passwortET.setError("Feld darf nicht leer sein");
+                if (TextUtils.isEmpty(passwort2)) {
+                    passwort.setError("Feld darf nicht leer sein");
                 } else {
                     progressDialog.setMessage("Registrieren");
                     progressDialog.setCanceledOnTouchOutside(false);
                     progressDialog.show();
 
-                    mauth.createUserWithEmailAndPassword(emailString, passwortString).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    auth.createUserWithEmailAndPassword(email2, passwort2).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {

@@ -2,18 +2,20 @@ package com.example.fallstudie;
 
 public class Data {
     String item, date, id, notes;
-    int amount, month;
+    int amount, month, woche;
 
     public Data() {
+
     }
 
-    public Data(String item, String date, String id, String notes, int amount, int month) {
+    public Data(String item, String date, String id, String notes, int amount, int month, int woche) {
         this.item = item;
         this.date = date;
         this.id = id;
         this.notes = notes;
         this.amount = amount;
         this.month = month;
+        this.woche = woche;
     }
 
     public String getItem() {
@@ -62,5 +64,13 @@ public class Data {
 
     public void setMonth(int month) {
         this.month = month;
+    }
+
+    public int getWoche() {
+        return woche;
+    }
+
+    public void setWoche(int woche) {
+        this.woche = woche;
     }
 }
