@@ -8,6 +8,7 @@ buildscript {
 
     dependencies {
         classpath 'com.google.gms:google-services:4.3.14'
+
     }
 }
 plugins {
@@ -15,3 +16,10 @@ plugins {
     id 'com.android.library' version '7.3.1' apply false
 
 }
+
+
+
+
+
+
+

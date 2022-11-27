@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView tagesAusgabe;
     private ImageView wocheAusgaben;
     private ImageView monatAusgabe;
+    private ImageView analytik;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         tagesAusgabe = findViewById(R.id.ausgabenHeute);
         monatAusgabe = findViewById(R.id.monatAusgabe);
         wocheAusgaben = findViewById(R.id.wocheasgb);
+        analytik = findViewById(R.id.analytikimgview);
 
         //Von Main- auf BudgetActivity springen
 
@@ -61,6 +63,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AusgabenWocheActivity.class);
                 intent.putExtra("sort", "monat");
+                startActivity(intent);
+            }
+        });
+
+        //von MainActivity auf Analytiks springen
+        analytik.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AnalytikActivity.class);
+                startActivity(intent);
+
             }
         });
     }
